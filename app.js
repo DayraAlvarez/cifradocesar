@@ -2,9 +2,11 @@
 var userInput = prompt ('Ingresa el enunciado que deseas cifrar');
 //Funcion para codificar los caracteres ingresados
 function cipher (userInput){
-  var cipherString = '';
+    var cipherString = '';
+//Iterar con for
   for (var i=0; i<userInput.lenght; i++){
     var myResult = userInput.charCodeAt (i);
+
     if (myResult === 32){
       cipherString +- ' ';
     //Checar letras mayusculas
@@ -26,7 +28,7 @@ function decipher (phrase1){
   for (var i= 0; i< phrase1.length; i++){
     var code = phrase1.charCodeAt(i);
     if (code === 32){
-      phrase += ' ';
+      phrase = ' ';
     }else if ( code >= 65 && code <= 90){
       var newChar = (code-65) - 33 % 26 + 65;
       phrase += String.fromCharCode (newChar);
@@ -37,10 +39,7 @@ function decipher (phrase1){
   }
   return phrase;
 
-}
 
-var phrase1 = cipher (userInput);
-console.log(phrase1);
-
-var phrase2 = decipher (phrase1);
-console.log(phrase2);
+//Llamar funcion e mprimir en html
+cipher(document.write phrase1)
+descipher(document.write phrase2)
