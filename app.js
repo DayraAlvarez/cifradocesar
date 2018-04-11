@@ -6,22 +6,20 @@ function cipher (userInput){
 //Iterar con for
   for (var i=0; i<userInput.lenght; i++){
     var myResult = userInput.charCodeAt (i);
-
     if (myResult === 32){
-      cipherString +- ' ';
-    //Checar letras mayusculas
+      cipherString +- ' '; //Agrega datos a var para funcion de for
+    //Checar letras mayusculas y minusculas
     } else if ( myResult >= 65 && myResult <=90){
       var doubleCheck = (myResult -65 + 33) %26 +65;
-      cipherString += String.fromCharCode (doublecheck);
-    //Checar letras minusculas
+      cipherString += String.fromCharCode (doublecheck);//Usa el resultado de var doubleCheck
+    //Cifrado cesar a 33 esoacios a la derecha
     }else if (myResult >= 97 && myResult <= 122) {
       var tripleCheck = ( myResult - 97 + 33 ) % 26 + 97;
       cipherString += String.fromCharCode ( tripleCheck);
-    }
-    }
+    }//Llave for
+  }//Llave function
 //Regresar string revisado para cifrar
 return cipherString;
-}
 //Funcion de cifrado Cesar
 function decipher (phrase1){
   var phrase = '';
@@ -38,7 +36,6 @@ function decipher (phrase1){
     }
   }
   return phrase;
-
 
 //Llamar funcion e mprimir en html
 cipher(document.write phrase1)
