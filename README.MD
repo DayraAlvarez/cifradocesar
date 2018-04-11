@@ -21,3 +21,5 @@
 5. Cerrar proceso dando a usuario la opcion de cifrar nuevo mensaje.
 
 ## Diagrama de flujo
+
+![alt text](https://raw.githubusercontent.com/DayraAlvarez/cifradocesar/master/assets/Diagrama%20de%20flujo.png)
